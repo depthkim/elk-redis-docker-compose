@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  metricbeat:
+    image: docker.elastic.co/beats/metricbeat:8.6.2
+    volumes:
+      - ./config/metricbeat.yml:/usr/share/metricbeat/metricbeat.yml
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+    user: root
+networks:
+  default:
+    external:
+      name: elk-server_elk

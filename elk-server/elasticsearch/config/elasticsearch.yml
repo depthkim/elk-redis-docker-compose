@@ -1,0 +1,11 @@
+cluster.name: docker-cluster
+network.host: 0.0.0.0
+
+bootstrap.memory_lock: true
+
+path:
+  repo:
+    - /usr/share/elasticsearch/backup
+indices.fielddata.cache.size: 65%
+xpack.license.self_generated.type: basic
+xpack.security.enabled: true
